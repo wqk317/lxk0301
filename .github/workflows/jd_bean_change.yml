@@ -16,7 +16,7 @@ jobs:
       - name: Checkout github_lxk0301_jd_scripts
         uses: actions/checkout@v2
         with:
-          repository: liuning0307/lxk0301
+          repository: baibaikk/lxk0301
           ref: master
       - name: Use Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v1
@@ -34,7 +34,7 @@ jobs:
       - name: '运行 【京豆变动通知】'
         run: node jd_bean_change.js
         env:
-          JD_COOKIE: ${{ secrets.JD_COOKIE }}
+          JD_COOKIE: ${{ secrets.JD_COOKIE2 }}
           JD_DEBUG: ${{ secrets.JD_DEBUG }}
           PUSH_KEY: ${{ secrets.PUSH_KEY }}
           BARK_PUSH: ${{ secrets.BARK_PUSH }}
